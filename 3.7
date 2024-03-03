@@ -1,0 +1,72 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    //3.7
+    //1.
+    const int foot_to_inch = 12;
+    int height1 = 0;
+    cin >> height1;
+    cout << height1 / foot_to_inch << " foot " << height1 % foot_to_inch << " inch" << endl;
+
+    //2.
+    int foot = 0;//英尺
+    int inch = 0;//英寸
+    float height = 0;//英磅
+    cin >> foot >> inch;
+    cin >> height;
+    const float meter = (foot + inch / 12.0) * 0.3048;//身高转换
+    const float kg = 2.2*height;//体重转换
+    float BMI = kg / (meter * meter);//BMI计算
+    cout << "BMI is " << BMI << endl;
+
+    //3.
+    int degree = 0;
+    int minutes = 0;
+    int seconds = 0;
+    cout << "Enter a latitude in degree, minutes and seconds:" << endl;
+    cout << "First, enter the degrees:";
+    cin >> degree;
+    cout << "Next, enter the minutes of arc:";
+    cin >> minutes;
+    cout << "Finally, enter the seconds of arc:";
+    cin>> seconds;
+    const float degree_to_minutes = 60;
+    const float degree_to_seconds = 3600;
+    float num = degree + minutes / degree_to_minutes + seconds / degree_to_seconds;
+    cout << degree << " degree," << minutes << " minutes," << seconds <<" second =" << num << " degrees" << endl;
+
+    //4
+    cout << "Enter the number of seconds:";
+    long long seconds1 = 0;
+    cin >> seconds1;
+    const int hour_to_seconds = 3600;
+    const int minute_to_seconds = 60;
+    const int day_to_seconds = 86400;
+    int day = seconds1 / day_to_seconds;//365.740740
+    int hour = (seconds1 - day * day_to_seconds) / hour_to_seconds;
+    int minute = (seconds1 - day * day_to_seconds - hour *hour_to_seconds) /  minute_to_seconds;
+    int second = seconds1 - day * day_to_seconds - minute * minute_to_seconds - hour *hour_to_seconds;
+    cout << seconds1 << " seconds = " << day << " days, " << minute << " minutes, " << second << " seconds" << endl;
+
+    //5
+    float mile = 0;
+    float gallon = 0;
+    cout << "Enter the number of miles:";
+    cin >> mile;
+    cout << "Enter the number of gallons:";
+    cin >> gallon;
+    cout << "Miles per gallon:" << mile / gallon << endl;
+
+    //6
+    float kilometers = 0;
+    float liters = 0;
+    cout << "Enter the number of kilometers:";
+    cin >> kilometers;
+    cout << "Enter the number of liters:";
+    cin >> liters;
+    float miles = kilometers * 0.6214;
+    float gallons = liters / 3.785;
+    cout << "Miles per gallon:" << miles / gallons << endl;
+    return 0;
+}
