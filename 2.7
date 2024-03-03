@@ -1,0 +1,72 @@
+#include<iostream>
+using namespace std;
+//3.
+void prt1()
+{
+    cout<<"Three blind mice"<<endl;
+}
+void prt2()
+{
+    cout<<"See how they run"<<endl;
+}
+//4
+float Fahrenheit(float celsius)
+{
+    return 1.8*celsius+32;
+}
+//5
+float lightYears(float years)
+{
+    return 63240*years;
+}
+//6
+void time(int hours, int minutes)
+{
+    cout << "Time: " << hours << ":" << minutes << endl;
+}
+int main()
+{
+    //2.7
+    //1.
+    cout << "name" << endl;
+    cout << "address" << endl;
+
+
+    //2.
+    int wave;
+    cin>>wave;
+    #define yard 220
+    cout<<wave*yard<<endl;
+
+
+    //3.
+    prt1();
+    prt1();
+    prt2();
+    prt2();
+   
+
+    //4
+    int celsius;
+    cout << "Please enter a Celsius value:";
+    cin >> celsius;
+    cout <<celsius <<" degrees Celsius is " << Fahrenheit(celsius) << " degrees Fahrenheit." << endl;
+
+
+    //5
+    float years;
+    cout << "Enter the number of light years:";
+    cin >> years;
+    cout << years << " light years = " << lightYears(years) << " astronomical units." << endl;
+    
+
+    //6
+    int hours;
+    int minutes;
+    cout << "Enter the number of hours:";
+    cin >> hours;
+    cout << "Enter the number of minutes:";
+    cin >> minutes;
+    time(hours, minutes);
+    return 0;
+}
